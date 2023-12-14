@@ -11,7 +11,6 @@ const Container = styled.header`
   padding: 15px 0px;
   justify-content: center;
   align-items: flex-start;
-  gap: 100px;
   background: rgba(255, 255, 255, 0.30);
   backdrop-filter: blur(2px);
   @media (max-width: 1100px) {

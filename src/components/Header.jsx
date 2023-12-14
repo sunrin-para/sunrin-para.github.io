@@ -5,7 +5,7 @@ const Container = styled.header`
   position: fixed;
   top: ${({ isScrolled }) => (isScrolled ? '0' : '-200px')};
   transition: top 0.5s ease-in-out;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
   display: flex;
   padding: 15px 0px;

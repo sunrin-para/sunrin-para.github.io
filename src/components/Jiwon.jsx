@@ -185,15 +185,15 @@ const Jiwon = () => {
     }
 
     const TimeUpdate = ()=>{
-
+        const isJiwon = false;
         let currentTime = new Date();
 
         let period = document.getElementById("Period");
         if (period == null) return;
 
         let result = "";
-        if (startTime.getFullYear() !== currentTime.getFullYear() || endTime.getDate() < currentTime.getDate()) {
-            result = "시간이 이미 모두 지났습니다.";
+        if (!isJiwon||startTime.getFullYear() !== currentTime.getFullYear() || endTime.getDate() < currentTime.getDate()) {
+            result = "지원 기간이 아닙니다.";
             clearInterval(timer);
         } else {
             let timeDiff = startTime - currentTime;
@@ -215,7 +215,7 @@ const Jiwon = () => {
         <Container>
 
             <TitleText> 지원 안내 및 문의 </TitleText>
-            <PeriodText id={"Period"}> 지원 기간 : 12월 15일 ~ 12월 27일 </PeriodText>
+            <PeriodText id={"Period"}> 지원 기간 : 추후 공개 예정</PeriodText>
             <BigWanjangContainer>
                 <WanjangContainer>
                     <Image/>

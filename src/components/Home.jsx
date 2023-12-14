@@ -9,12 +9,15 @@ const Container = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 `;
 
 const BlackRect = styled.div`
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.65);`;
+  background: rgba(0, 0, 0, 0.65);
+  overflow-x: hidden;
+`;
 
 
 const Title = styled.div`
@@ -23,6 +26,9 @@ const Title = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  @media (max-width: 800px) {
+    font-size: 68px;
+  }
 `;
 
 const SubTitle = styled.div`
@@ -34,6 +40,9 @@ const SubTitle = styled.div`
   line-height: normal;
   letter-spacing: 1.76px;
   margin-bottom: 50px;
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
 `;
 
 const IntroduceContainer = styled.div`
@@ -43,7 +52,6 @@ const IntroduceContainer = styled.div`
   justify-content: center;
   height: 100%;
   gap: 7px;
-  
 `;
 
 

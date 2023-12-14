@@ -5,7 +5,7 @@ const Container = styled.header`
   position: fixed;
   top: ${({ isScrolled }) => (isScrolled ? '0' : '-200px')};
   transition: top 0.5s ease-in-out;
-  width: 100%;
+  width: 100vw;
   z-index: 1000;
   display: flex;
   padding: 15px 0px;
@@ -14,6 +14,10 @@ const Container = styled.header`
   gap: 100px;
   background: rgba(255, 255, 255, 0.30);
   backdrop-filter: blur(2px);
+  @media (max-width: 1100px) {
+    width: 0px;
+    height: 0px;
+  }
 `;
 
 const Button = styled.button`
@@ -30,6 +34,10 @@ const Button = styled.button`
   &:hover {
     background: rgba(170, 170, 170, 0.5);
   }
+  @media (max-width: 1100px) {
+    width: 0px;
+    height: 0px;
+  }
 `;
 
 const ButtonText = styled.div`
@@ -38,6 +46,9 @@ const ButtonText = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @media (max-width: 1100px) {
+    font-size: 0px;
+  }
 `;
 
 const Header = () => {

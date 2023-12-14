@@ -8,6 +8,9 @@ const Container = styled.div`
     align-items: center;
     height: 220px;
     background: #313131;
+    @media (max-width: 500px) {
+      height: 110px;
+    }
 `;
 
 const Footer = () => {

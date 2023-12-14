@@ -17,6 +17,9 @@ const TitleText = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 43.2px */
+  @media (max-width: 800px) {
+    font-size: 26px;
+  }
 `;
 
 const BigContainer = styled.div`
@@ -24,6 +27,9 @@ const BigContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 70px;
+  @media (max-width: 800px) {
+    gap: 50px;
+  }
 `;
 
 const CurriculumContainer = styled.div`
@@ -31,12 +37,21 @@ const CurriculumContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  @media (max-width: 800px) {
+    gap: 30px;
+  }
 `;
 
 const CurriculumGroup = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 30px;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 `;
 
 const CurriculumBox = styled.div`
@@ -45,6 +60,10 @@ const CurriculumBox = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  @media (max-width: 800px) {
+    gap: 10px;
+    width: 300px;
+  }
 `;
 
 const CurriculumTitle = styled.div`
@@ -53,6 +72,9 @@ const CurriculumTitle = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 36px */
+  @media (max-width: 800px) {
+    font-size: 18px;
+  }
 `;
 
 const CurriculumDetailText= styled.div`
@@ -61,6 +83,9 @@ const CurriculumDetailText= styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 26.4px */
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
 `;
 
 const Curriculum = () => {

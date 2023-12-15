@@ -74,6 +74,10 @@ const WanjangContainer = styled.div`
   align-items: center;
   gap: 10px;
   width: 400px;
+  @media (max-width: 800px) {
+    width: 300px;
+  }
+  
 `;
 
 const Text = styled.div`

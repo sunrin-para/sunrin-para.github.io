@@ -6,6 +6,7 @@ import styled from "styled-components";
 import para_image from "../assets/PARA.png";
 
 const Container = styled.div`
+  width: 100%;
   height: 110vh;
   background: #FFFFFF;
   display: flex;

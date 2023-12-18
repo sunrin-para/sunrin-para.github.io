@@ -178,43 +178,57 @@ const ButtonText = styled.div`
   }
 `;
 
+
+
 const Jiwon = () => {
+
+    let isJiwonGigan = true;//현재 지원 기간인가?
+    let isJiwon = false//지원이 가능한가?
+    let timeDiff;
+
+    let days = 0 ;
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const startTime = new Date('2023-12-18T18:00:00');
-
     const endTime = new Date("2023-12-24T23:59:59");
     const toParaInsta = ()=> {
         window.open("https://www.instagram.com/sunrin_para/", "_blank", "noreferrer");
     }
 
     const toJiwonForm = ()=> {
-        window.open("https://forms.gle/cVMum1hGpMB3gNPf6", "_blank", "noreferrer");
+        if(isJiwon){
+            window.open("https://forms.gle/cVMum1hGpMB3gNPf6", "_blank", "noreferrer");
+        }
     }
 
 
 
     const TimeUpdate = ()=>{
-        const isJiwon = true;
+
+
         let currentTime = new Date();
 
         let period = document.getElementById("Period");
         if (period == null) return;
 
         let result = "";
-        if (!isJiwon||startTime.getFullYear() !== currentTime.getFullYear() || endTime.getDate() < currentTime.getDate()) {
+        if (!isJiwonGigan||startTime.getFullYear() !== currentTime.getFullYear() || endTime.getDate() < currentTime.getDate()) {
             result = "지원 기간이 아닙니다.";
             clearInterval(timer);
         } else {
-            let timeDiff = startTime - currentTime;
-            let days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            timeDiff = startTime - currentTime;
+            days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
             if (timeDiff<0)
             {
+                isJiwon = true;
                 timeDiff = endTime - currentTime;
                 days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
                 hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

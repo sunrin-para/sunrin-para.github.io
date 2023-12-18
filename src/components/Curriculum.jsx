@@ -117,6 +117,7 @@ const Curriculum = () => {
                         </CurriculumBox>
                         <CurriculumBox>
                             <CurriculumTitle>겨울방학</CurriculumTitle>
+                            <CurriculumDetailText> - 피그마 UI/UX 디자인 특강</CurriculumDetailText>
                             <CurriculumDetailText> - 앱 개발 동아리와 협업 프로젝트 진행</CurriculumDetailText>
                             <CurriculumDetailText> - 차기 동아리 인수인계 작업</CurriculumDetailText>
                         </CurriculumBox>
@@ -125,7 +126,7 @@ const Curriculum = () => {
                         <CurriculumBox>
                             <CurriculumTitle>기타</CurriculumTitle>
                             <CurriculumDetailText> - 다른 전공 동아리와 협동 수업</CurriculumDetailText>
-                            <CurriculumDetailText>  - 인공지능 수학 수업</CurriculumDetailText>
+                            <CurriculumDetailText> - 인공지능 수학 수업</CurriculumDetailText>
                             <CurriculumDetailText> - 알고리즘 수업</CurriculumDetailText>
                             <CurriculumDetailText> - 자체제작 문제집 과제</CurriculumDetailText>
                         </CurriculumBox>

@@ -14,9 +14,20 @@ const Container = styled.div`
     }
 `;
 
+const Text = styled.div`
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    line-height: 140%;
+      @media (max-width: 800px) {
+        font-size: 14px;
+      }
+`;
+
 const Footer = () => {
     return (
         <Container>
+            <Text>개발 : 유채호 이정훈<br/>디자인 : 유채호 이정훈</Text>
         </Container>
     );
 };

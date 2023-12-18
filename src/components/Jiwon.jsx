@@ -182,15 +182,21 @@ const Jiwon = () => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    const startTime = new Date('2023-12-15T00:00:00');
+    const startTime = new Date('2023-12-18T18:00:00');
 
-    const endTime = new Date("2023-12-27T23:59:59");
-    function toParaInsta(){
+    const endTime = new Date("2023-12-24T23:59:59");
+    const toParaInsta = ()=> {
         window.open("https://www.instagram.com/sunrin_para/", "_blank", "noreferrer");
     }
 
+    const toJiwonForm = ()=> {
+        window.open("https://forms.gle/cVMum1hGpMB3gNPf6", "_blank", "noreferrer");
+    }
+
+
+
     const TimeUpdate = ()=>{
-        const isJiwon = false;
+        const isJiwon = true;
         let currentTime = new Date();
 
         let period = document.getElementById("Period");
@@ -207,8 +213,21 @@ const Jiwon = () => {
             let minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
             let seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-            result = `지원 기간 : 12월 15일 ~ 12월 27일<br>
+            if (timeDiff<0)
+            {
+                timeDiff = endTime - currentTime;
+                days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+                result = result = `지원 기간 : 12월 18일 18시 ~ 12월 24일<br>
+                지원 마감까지 남은 시간 : ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+            }
+            else{
+                result = `지원 기간 : 12월 18일 18시 ~ 12월 24일<br>
                 지원 시작까지 남은 시간 : ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+            }
         }
 
         period.innerHTML = result;
@@ -231,9 +250,9 @@ const Jiwon = () => {
                 <Line/>
                 <WanjangContainer>
                     <WanjanNameText>부장 이정훈</WanjanNameText>
-                    <Text>Insta : @compy07&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Tell : 01012341234</Text>
+                    <Text>Insta : @compy07</Text>
                     <WanjanNameText style={{marginTop:"30px"}}>쀼장 유채호</WanjanNameText>
-                    <Text>Insta : @chaeho_yu&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Tell : 01012341234</Text>
+                    <Text>Insta : @chaeho_yu_&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Tell : 01087343741</Text>
                     <CareerText>
                     </CareerText>
                 </WanjangContainer>
@@ -244,7 +263,7 @@ const Jiwon = () => {
                 <ButtonText style={{color: "black"}}>인스타그램으로 문의</ButtonText>
             </Button>
 
-            <JiwonButton onClick={() => {setModalIsOpen(true);}}>
+            <JiwonButton onClick={toJiwonForm/*{() => {{setModalIsOpen(true);}}}*/}>
                 <ButtonText>PARA 지원하기</ButtonText>
             </JiwonButton>
 

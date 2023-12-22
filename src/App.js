@@ -5,6 +5,7 @@ import Essential from "./components/Essential";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Curriculum from "./components/Curriculum";
+import Record from "./components/Record";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Home/>
             <Essential/>
             <Curriculum/>
+            <Record/>
             <Jiwon/>
             <Footer/>
         </div>

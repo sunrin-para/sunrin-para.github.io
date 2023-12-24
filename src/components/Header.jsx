@@ -84,7 +84,10 @@ const Header = () => {
                 <ButtonText>Curriculum</ButtonText>
             </Button>
             <Button onClick={() => {move(3);}}>
-                <ButtonText>Apply & Inquiry</ButtonText>
+                <ButtonText>Record</ButtonText>
+            </Button>
+            <Button onClick={() => {move(4);}}>
+                <ButtonText>Apply & Enquiry</ButtonText>
             </Button>
         </Container>
     );

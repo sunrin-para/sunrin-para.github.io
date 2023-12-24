@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import bg from "../assets/background.png";
+import bg from "../assets/background.webp";
 
 const Container = styled.div`
     width: 100%;

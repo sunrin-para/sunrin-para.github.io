@@ -3,7 +3,7 @@ import React, {useRef, useState} from "react";
 import {Line} from "./Elements";
 
 import styled from "styled-components";
-import para_image from "../assets/PARA.png";
+import para_image from "../assets/PARA.webp";
 
 const Container = styled.div`
   width: 100%;
@@ -193,8 +193,8 @@ const Jiwon = () => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    const startTime = new Date('2023-12-18T18:00:00');
-    const endTime = new Date("2023-12-24T23:59:59");
+    const startTime = new Date('2023-12-15T18:00:00');
+    const endTime = new Date("2023-12-31T23:59:59");
     const toParaInsta = ()=> {
         window.open("https://www.instagram.com/sunrin_para/", "_blank", "noreferrer");
     }
@@ -235,11 +235,11 @@ const Jiwon = () => {
                 minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
                 seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-                result = result = `지원 기간 : 12월 18일 18시 ~ 12월 24일<br>
+                result = result = `지원 기간 : 12월 15일 18시 ~ 12월 31일<br>
                 지원 마감까지 남은 시간 : ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
             }
             else{
-                result = `지원 기간 : 12월 18일 18시 ~ 12월 24일<br>
+                result = `지원 기간 : 12월 15일 18시 ~ 12월 31일<br>
                 지원 시작까지 남은 시간 : ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
             }
         }

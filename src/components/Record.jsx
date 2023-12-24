@@ -3,7 +3,6 @@ import React, {useRef, useState} from "react";
 import {Line} from "./Elements";
 
 import styled from "styled-components";
-import para_image from "../assets/PARA.png";
 
 const Container = styled.div`
   width: 100%;
